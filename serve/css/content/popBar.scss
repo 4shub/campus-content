@@ -1,0 +1,15 @@
+.popBar{
+  display: none;
+  position: fixed;
+  padding: 20px;
+
+  width: 100%;
+  z-index: 999999;
+  text-align: center;
+
+
+  &.error{
+      background: $red;
+      color:$white;
+  }
+}

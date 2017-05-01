@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body{
+  background-color: $defaultBackground;
+  margin: 0px;
+  padding: 0px;
+  font-family: $fonts;
+  color: $defaultFontColor;
+  width: 100%;
+  height: 100%;
+
+
+
+  font-size: $default-font-size;
+  line-height: $default-line-height;
+}
+
+a{
+  color: $white;
+  text-decoration: none;
+  position: relative;
+}
+
+h1{
+  font-size: $default-h1-size;
+  font-weight: $default-h1-weight;
+  line-height: 83px;
+}
+
+h2{
+  font-size: $default-h2-size;
+  font-weight: $default-h2-weight;
+  line-height: 1;
+}
+
+h3{
+  font-size: $default-h3-size;
+  font-weight: $default-h3-weight;
+  margin: 25px 0px 0px;
+  line-height: 1;
+}
+
+h5{
+  font-size: $default-font-size;
+  font-weight: 400;
+  color: $grey;
+}
+
+
+nav li{
+  list-style: none;
+  display: inline;
+}
+
+button{
+  padding:18px 30px;
+  background-color: $red;
+  border: 0px;
+  border-radius: 5px;
+  font:inherit;
+  cursor: pointer;
+  color:$white;
+
+  &.slim{
+    height: auto;
+    padding: 5px 25px;
+    border: 2px solid $white;
+    background: none;
+  }
+
+ &.slim.selected{
+    background: $white;
+    color: $red;
+  }
+
+}
+
+p{
+  margin: 20px 0px;
+}
+
+.clear{
+  clear:both;
+}
+
+.visible{
+  display: block;
+}
+
+a.disable-hover:after{
+    display: none;
+}
+
+.logo{
+  @include logo;
+}
+
+.center{
+  max-width:$maxWidth;
+  margin: auto;
+  width: 100%;
+  padding: 0px 20px;
+}
+
+nav a{
+  color: inherit;
+}
+
+.red{
+  color:$red;
+}
+
+.altblue{
+  color:$altblue;
+}
+
+
+.button-small{
+  @include button;
+  @include button-small;
+}
+
+button, .button{
+  @include button;
+}
+
+button, .button, .button-small{
+  &.inverted{
+    background-color: $white;
+    color: $lightblue;
+  }
+
+  &a{
+    display: inline-block;
+  }
+}
+
+.slide{
+  height: 100%;
+  width: 100%;
+}
+
+.lightblue{
+  color: $lightblue;
+}

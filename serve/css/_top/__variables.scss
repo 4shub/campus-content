@@ -1,0 +1,82 @@
+$white: #FFFFFF;
+$black: #333;
+$red: #FF5850;
+$grey: #F6F6F6;
+$blue: #101F30;
+$altblue: #1D304B;
+$lightblue: #30D1E1;
+$purple: #353963;
+
+$fonts: "Avenir", "Century Gothic", "Arial", "sans-serif";
+
+$default-font-size: 14px;
+$default-line-height: 25px;
+
+$default-h1-size: 64px;
+$default-h1-weight: 700;
+
+$default-h2-size: 42px;
+$default-h2-weight: 700;
+
+$default-h3-size: 21px;
+$default-h3-weight: 700;
+
+$defaultBackground: $blue;
+$defaultForeground: $white;
+$defaultFontColor: $white;
+
+$maxWidth: 1180px;
+$headerHeight: 100px;
+
+$selectedGrey: #f2f2f2;
+$greyText: #8D8D8D;
+
+$switch-color: $lightblue;
+$input-focus-color: $lightblue;
+
+@mixin logo{
+  font-weight: 600;
+  line-height: 50px;
+}
+
+
+@mixin placeholder($color, $opacity){
+  &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+      color:$color;
+      opacity:$opacity;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+     color:$color;
+     opacity:$opacity;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+     color:$color;
+     opacity:$opacity;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+     color:$color;
+     opacity:$opacity;
+  }
+}
+
+@mixin button{
+  border-radius: 3px;
+  background-color: $lightblue;
+  color:$white;
+  height:70px;
+  padding: 0px 40px;
+  min-width: 200px;
+  cursor: pointer;
+  line-height: 70px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+@mixin button-small{
+  min-width: 150px;
+  padding: 0px 20px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+}

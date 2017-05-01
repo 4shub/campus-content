@@ -1,0 +1,41 @@
+.index.contrib
+  .center
+    section.index-contrib
+      h2.join-text Join the community.
+      p.word-from-us.
+        Thank you for joining us on this particular journey into music. Hope you and the community you find is enjoyable
+        <br>
+        - Shub and Deo
+      form.contribute-app#contribute-form
+        .switch-box
+          .switch#contribute-login.selected(data-type='login')
+            .switch-ball
+            .switch-content
+              .switch-header Login
+              .switch-footer I already have an account
+          .switch#contribute-signup(data-type='signup')
+            .switch-ball
+            .switch-content
+              .switch-header Signup
+              .switch-footer I want to register an account
+        .form-section.onRegistration
+          label(for='contribute-name') Your Name
+          input#contribute-name(type='text' placeholder='Your Name')
+        .form-section
+          label(for='contribute-email') Your Email Address
+          input#contribute-email(type='email' placeholder='your@email.address.com')
+        .form-section
+          label(for='contribute-password') Your Password
+          input#contribute-password(type='password' placeholder='Your Password')
+          .small-note.onRegistration Passwords need to be at least 6 characters long
+        .form-section.onRegistration
+          label(for='contribute-password-confirm') Confirm Your Password
+          input#contribute-password-confirm(type='password' placeholder='Your Password')
+        .form-section.onLogin
+          - var specialSubmitText = 'Login';
+          - var specialSubmitId = 'submitLogin';
+          include ../assets/specialSubmit
+        .form-section.onRegistration
+          - var specialSubmitText = 'Sign Up';
+          - var specialSubmitId = 'submitSignup';
+          include ../assets/specialSubmit

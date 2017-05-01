@@ -1,0 +1,17 @@
+.player
+  .center
+    .player-container
+      audio#music(preload="true")
+        source
+      #audioplayer
+        #playButton
+          .play-content.play-icon
+            include icons/play.svg
+          .pause-content.play-icon
+            include icons/pause.svg
+      .player-display
+        .player-song-info
+          span.song-title Title
+          span.song-creator Creator Name
+        #timeline.player-timeline
+            #playhead

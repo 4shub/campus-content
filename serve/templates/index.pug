@@ -1,0 +1,18 @@
+html
+  head
+    include assets/head
+  body
+    include assets/header
+    -if(type === 'index'){
+      include pages/index
+    -} else if(type === 'auth'){
+      include pages/auth
+    -} else if(type === 'explore'){
+      include pages/explore
+    -} else if(type === 'upload'){
+      include pages/upload
+    -} else  {
+      include pages/song
+    - }
+    include assets/player
+    include assets/footer

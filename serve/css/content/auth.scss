@@ -1,0 +1,157 @@
+.switch-box{
+  display: flex;
+  margin: 20px 0px;
+  justify-content: space-between;
+
+}
+
+.contrib{
+  .center{
+    width: 600px;
+  }
+
+
+}
+
+.upload-overlay-cover{
+  position: relative;
+  background: $altblue;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  margin: 0px 0px 20px;
+  cursor: pointer;
+}
+
+.upload-underlay{
+  position: absolute;
+  width: 100%;
+  height: 65px;
+  top: 0px;
+  opacity: 0;
+
+}
+
+
+.join-text{
+  text-align: center;
+}
+
+.word-from-us{
+  background: $altblue;
+  padding: 20px;
+}
+
+.switch{
+  border-radius: 3px;
+  border: 2px solid #BBB;
+  padding: 15px;
+  min-width: 250px;
+  line-height: 1.4;
+  cursor: pointer;
+  width: 49%;
+  width: calc(50% - 10px);
+  display: flex;
+
+  .switch-ball{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top:50%;
+    border: 2px solid #BBB;
+    border-radius: 100%;
+    margin-top: calc(-25px/2);
+    margin-right: 15px;
+
+  }
+  &.selected{
+    border-color: $switch-color;
+
+    .switch-ball{
+      background: $switch-color;
+      border-color: $switch-color;
+    }
+  }
+}
+
+
+
+.switch-header{
+  font-weight: 600;
+}
+
+.switch-footer{
+  font-weight: 10px;
+}
+
+[data-type='signup']{
+  .onRegistration{
+    display: block;
+  }
+
+  .onLogin{
+    display: none;
+  }
+}
+
+.onRegistration{
+  display: none;
+}
+
+form{
+  label, input{
+    display: block;
+    font-family: $fonts;
+  }
+
+  label{
+    font-weight: 600;
+    font-weight: 12px;
+  }
+
+  .form-section{
+    position: relative;
+    margin: 30px 0px;
+  }
+
+  input{
+    border: 0px;
+
+    &[type="text"],
+    &[type='password'],
+    &[type="email"]{
+        line-height: 2;
+
+        border-bottom: 2px solid #FED6D6;
+        font-size: 16px;
+        padding: 10px 0px;
+        width: 100%;
+        margin: 0px 0px 20px 0px;
+        background: transparent;
+        color: #fff;
+
+        &:focus{
+          border-color: $input-focus-color;
+          transition: border-color 100ms ease-in;
+        }
+      }
+    }
+
+
+  [type='submit']{
+    display: block;
+  }
+}
+
+.contrib{
+  padding: 100px 0px;
+}
+
+.special-submit{
+  margin: 0 auto;
+}
+
+.small-note{
+  font-size:10px;
+  color: $greyText;
+}

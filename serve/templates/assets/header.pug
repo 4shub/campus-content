@@ -1,0 +1,14 @@
+header
+  .center
+    a(href='/')
+      .logo college content.
+    nav
+      a(href='/') Help
+      a(href='/') About
+      - if(user){
+        a(href='/profile')= user.name
+        a.button-small(href='/upload') Upload
+      -} else {
+        a(href='/login') Log In
+        a.button-small(href='/signup') Join for Free
+      -}

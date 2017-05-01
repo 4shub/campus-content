@@ -1,0 +1,18 @@
+content
+  .center.upload
+    h2 Share your work!
+    form.upload-app#upload-form(method="POST" action="/upload" enctype="multipart/form-data")
+      .form-nextto
+        .form-section
+          .upload-overlay-cover
+            span Click here to upload a cover photo
+          input.upload-underlay.upload-cover#upload-cover-photo(name='cover' type='file' accept=".png,.jpg")
+        .form-section
+          .upload-overlay-cover
+            span Click here to upload your song
+          input.upload-underlay.upload-song#upload-song(name='song' type='file' accept=".mp3")
+      .form-section
+        label(for='upload-name') Your Song Name
+        input#upload-name(name='name' type='text' placeholder='Dat Song')
+      .form-section
+        input.button(type='submit' value='Submit Song')
